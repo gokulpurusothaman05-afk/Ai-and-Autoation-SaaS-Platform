@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    <meta name="description" content="Reach Stackly’s Bengaluru HQ, Mumbai Office, or Chennai Zone. Schedule custom callback times.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 1. Preloader Section -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo"><img src="images/logo.webp" alt="Logo"> Stack<span>ly</span></div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Common Navigation Header -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo.webp" alt="Logo">
+            Stack<span>ly</span>
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="nav-ctas-pill">
+                <a href="signup.html" class="btn-pill btn-pill-primary">Sign Up</a>
+                <a href="login.html" class="btn-pill btn-pill-secondary">Login</a>
+            </div>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+   
+
+    <!-- 4. Contact Message Form Section -->
+    <section id="contact-form-section">
+        <div class="sec-title-wrap">
+            <div class="subtitle-badge">Message Us</div>
+            <h2 class="sec-title">Send a message</h2>
+            <p class="sec-desc">Input details and database fields to route questions directly to Solutions architects.</p>
+        </div>
+        <div style="max-width: 600px; margin: 0 auto;" class="glass-card">
+            <form data-action="404.html">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;" class="hero-grid">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="Name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="Email" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Message Content</label>
+                    <textarea placeholder="Message" class="form-control" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%; padding:0.9rem;">Dispatch Secure Message</button>
+            </form>
+        </div>
+    </section>
+
+   
+
+    <!-- Common Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-info">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.webp" alt="Logo">
+                    Stack<span>ly</span>
+                </a>
+                <p>State-of-the-art SaaS platform providing cloud execution spaces and cognitive AI pipelines for enterprise workflows.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="services.html">SLA Metrics</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact HQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Receive notifications regarding system releases and upcoming service capabilities.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Stackly Inc. All rights reserved.</p>
+            <p style="font-size: 0.85rem;">Bengaluru HQ: Outer Ring Rd, Bellandur, Bengaluru, Karnataka 560103</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Custom map coordinate drawer
+        const map = document.getElementById('map-canvas');
+        if (map) {
+            const ctx = map.getContext('2d');
+            const width = map.width = map.offsetWidth || 600;
+            const height = map.height = 300;
+
+            ctx.clearRect(0,0,width,height);
+            
+            // Draw schematic grid
+            ctx.strokeStyle = 'rgba(157, 78, 221, 0.15)';
+            ctx.lineWidth = 1;
+            for (let i = 0; i < width; i += 40) {
+                ctx.beginPath();
+                ctx.moveTo(i, 0);
+                ctx.lineTo(i, height);
+                ctx.stroke();
+            }
+            for (let j = 0; j < height; j += 40) {
+                ctx.beginPath();
+                ctx.moveTo(0, j);
+                ctx.lineTo(width, j);
+                ctx.stroke();
+            }
+
+            // Draw Bengaluru HQ locator point
+            ctx.fillStyle = 'rgba(0, 255, 255, 0.2)';
+            ctx.beginPath();
+            ctx.arc(width/2, height/2, 45, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = 'var(--secondary)';
+            ctx.beginPath();
+            ctx.arc(width/2, height/2, 10, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 13px Inter';
+            ctx.textAlign = 'center';
+            ctx.fillText('Stackly Bengaluru HQ', width/2, height/2 - 20);
+        }
+
+        // Toggle pricing classes in faq
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(it => {
+            it.addEventListener('click', () => {
+                const ans = it.querySelector('.faq-answer');
+                const icon = it.querySelector('.faq-question i');
+                if (ans) {
+                    if (ans.style.display === 'block') {
+                        ans.style.display = 'none';
+                        if (icon) icon.className = 'fas fa-plus';
+                    } else {
+                        ans.style.display = 'block';
+                        if (icon) icon.className = 'fas fa-minus';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

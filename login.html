@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .portal-tabs {
+            display: flex;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 0.3rem;
+            margin-bottom: 2rem;
+        }
+        .portal-tab {
+            flex-grow: 1;
+            text-align: center;
+            padding: 0.8rem;
+            border-radius: 10px;
+            font-family: var(--font-outfit);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--text-muted);
+        }
+        .portal-tab.active {
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 4px 12px var(--primary-glow);
+        }
+        .login-box {
+            max-width: 480px;
+            margin: 10rem auto 5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Preloader Section -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo"><img src="images/logo.webp" alt="Logo"> Stack<span>ly</span></div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Common Navigation Header -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo.webp" alt="Logo">
+            Stack<span>ly</span>
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-ctas-pill">
+                <a href="signup.html" class="btn-pill btn-pill-secondary">Sign Up</a>
+                <a href="login.html" class="btn-pill btn-pill-primary">Login</a>
+            </div>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- 2. Portal Form Box Section -->
+    <section style="padding: 0 5%;">
+        <div class="login-box glass-card">
+            <h2 style="font-size: 2rem; margin-bottom: 0.5rem; text-align: center;">Welcome Back</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Select portal destination below and log in.</p>
+            
+            <div class="portal-tabs">
+                <div class="portal-tab active" id="tab-client">Client Portal</div>
+                <div class="portal-tab" id="tab-admin">Admin Portal</div>
+            </div>
+
+            <!-- Client Form -->
+            <form id="form-client" data-action="client-dashboard.html">
+                <div class="form-group">
+                    <label>Client Email Address</label>
+                    <input type="email" placeholder="client@company.in" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <label>Client Password</label>
+                        <a href="404.html" style="font-size: 0.8rem; color: var(--secondary); margin-bottom: 0.6rem;">Forgot password?</a>
+                    </div>
+                    <input type="password" placeholder="Password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem;">Sign In to Client Workspace</button>
+            </form>
+
+            <!-- Admin Form (Hidden by default) -->
+            <form id="form-admin" data-action="admin-dashboard.html" style="display: none;">
+                <div class="form-group">
+                    <label>Admin ID Code</label>
+                    <input type="email" placeholder="admin@stackly.in" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <label>Admin Password</label>
+                        <a href="404.html" style="font-size: 0.8rem; color: var(--secondary); margin-bottom: 0.6rem;">Forgot password?</a>
+                    </div>
+                    <input type="password" placeholder="Password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem;">Authenticate Admin Panel</button>
+            </form>
+
+            <p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem;">Don't have a developer account? <a href="signup.html" style="color: var(--secondary); font-weight: 600;">Create sandbox free</a></p>
+        </div>
+    </section>
+
+    <!-- Common Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-info">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.webp" alt="Logo">
+                    Stack<span>ly</span>
+                </a>
+                <p>State-of-the-art SaaS platform providing cloud execution spaces and cognitive AI pipelines for enterprise workflows.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="services.html">SLA Metrics</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact HQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Receive notifications regarding system releases and upcoming service capabilities.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Stackly Inc. All rights reserved.</p>
+            <p style="font-size: 0.85rem;">Bengaluru HQ: Outer Ring Rd, Bellandur, Bengaluru, Karnataka 560103</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Portal switching tabs logic
+        const tabClient = document.getElementById('tab-client');
+        const tabAdmin = document.getElementById('tab-admin');
+        const formClient = document.getElementById('form-client');
+        const formAdmin = document.getElementById('form-admin');
+
+        if (tabClient && tabAdmin && formClient && formAdmin) {
+            tabClient.addEventListener('click', () => {
+                tabClient.classList.add('active');
+                tabAdmin.classList.remove('active');
+                formClient.style.display = 'block';
+                formAdmin.style.display = 'none';
+            });
+
+            tabAdmin.addEventListener('click', () => {
+                tabAdmin.classList.add('active');
+                tabClient.classList.remove('active');
+                formAdmin.style.display = 'block';
+                formClient.style.display = 'none';
+            });
+        }
+    </script>
+</body>
+</html>

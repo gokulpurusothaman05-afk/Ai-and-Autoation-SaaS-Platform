@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    <meta name="description" content="Choose from Stackly’s scalable automation pricing models. Flex tiers and custom packages available.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 1. Preloader Section -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo"><img src="images/logo.webp" alt="Logo"> Stack<span>ly</span></div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Common Navigation Header -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo.webp" alt="Logo">
+            Stack<span>ly</span>
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html" class="active">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-ctas-pill">
+                <a href="signup.html" class="btn-pill btn-pill-primary">Sign Up</a>
+                <a href="login.html" class="btn-pill btn-pill-secondary">Login</a>
+            </div>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- 2. Pricing Hero Section -->
+    <section id="pricing-hero" style="padding-top: 10rem; text-align: center;">
+        <div class="glow-dot" style="top: 15%; left: 20%; width: 360px; height: 360px;"></div>
+        <div class="sec-title-wrap">
+            <div class="subtitle-badge">Pricing Plans</div>
+            <h1 style="font-size: 3.5rem; background: linear-gradient(135deg, #ffffff 40%, var(--text-muted)); background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1.5rem;">Flexible plans for flexible operations</h1>
+            <p class="sec-desc" style="font-size: 1.15rem; margin-bottom: 2rem;">Save 20% by subscribing to a yearly billing cycle configuration.</p>
+            
+           
+        </div>
+    </section>
+
+    <!-- 3. Subscription Cards Grid Section -->
+    <section id="pricing-tiers" style="background: rgba(12, 7, 30, 0.4); border-top: 1px solid rgba(157, 78, 221, 0.08); border-bottom: 1px solid rgba(157, 78, 221, 0.08);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto;">
+            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 style="margin-bottom: 0.5rem;">Basic Tier</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Ideal for single system scripts.</p>
+                    <div class="plan-price" data-monthly="3999" style="font-size: 2.8rem; font-weight: 800; color: #fff; margin-bottom: 1.5rem;">₹3,999<span>/mo</span></div>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem;">
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> 10,000 monthly executions</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> 2 concurrent sandboxes</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> 7 days audit log duration</li>
+                    </ul>
+                </div>
+                <a href="signup.html" class="btn btn-secondary" style="width: 100%;">Deploy Basic Sandbox</a>
+            </div>
+            <div class="glass-card" style="border-color: var(--secondary); display: flex; flex-direction: column; justify-content: space-between; position: relative;">
+                <span style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--secondary), var(--primary)); color: var(--bg-dark); font-weight: bold; font-size: 0.8rem; padding: 0.4rem 1.2rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 1px;">Most Popular</span>
+                <div>
+                    <h3 style="margin-bottom: 0.5rem;">Professional</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Ideal for growing platform logic.</p>
+                    <div class="plan-price" data-monthly="15999" style="font-size: 2.8rem; font-weight: 800; color: #fff; margin-bottom: 1.5rem;">₹15,999<span>/mo</span></div>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem;">
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> 250,000 monthly executions</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> 15 concurrent sandboxes</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Rotating Residential proxy support</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> 30 days audit log duration</li>
+                    </ul>
+                </div>
+                <a href="signup.html" class="btn btn-primary" style="width: 100%;">Deploy Professional Tier</a>
+            </div>
+            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 style="margin-bottom: 0.5rem;">Enterprise Spec</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Tailored for massive API systems.</p>
+                    <div class="plan-price" data-monthly="71999" style="font-size: 2.8rem; font-weight: 800; color: #fff; margin-bottom: 1.5rem;">₹71,999<span>/mo</span></div>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem;">
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Unlimited executions</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Dedicated subnet proxy pools</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> 90 days audit log duration</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Dedicated Support Engineer</li>
+                    </ul>
+                </div>
+                <a href="contact.html" class="btn btn-secondary" style="width: 100%;">Request Custom Specs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Interactive Tasks Rate Slider Section -->
+    <section id="rate-slider">
+        <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+            <div class="subtitle-badge">Custom Calculator</div>
+            <h2 class="sec-title" style="margin-bottom: 1.5rem;">Need more operations capacity?</h2>
+            <p style="margin-bottom: 2.5rem;">Adjust the slider below to estimate monthly charges for massive transaction volumes.</p>
+            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.2rem;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                    <strong>Monthly Runs Capacity</strong>
+                    <strong style="color: var(--secondary);" id="tasks-label">10,000 Runs</strong>
+                </div>
+                <input type="range" min="10000" max="1000000" step="10000" value="10000" class="roi-slider" id="task-calc-slider" style="width: 100%; accent-color: var(--secondary); cursor: pointer; margin-bottom: 1.5rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(157,78,221,0.1); padding-top: 1.5rem;">
+                    <span>Estimated Monthly Cost</span>
+                    <strong style="font-size: 1.8rem; color: #fff;" id="custom-cost-value">₹3,999/mo</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Specs comparison matrix table Section -->
+    <section id="specs-table" style="background: rgba(12, 7, 30, 0.4); border-top: 1px solid rgba(157, 78, 221, 0.08); border-bottom: 1px solid rgba(157, 78, 221, 0.08);">
+        <div class="sec-title-wrap">
+            <div class="subtitle-badge">Features Matrix</div>
+            <h2 class="sec-title">Deep dive capabilities</h2>
+        </div>
+        <div style="overflow-x: auto; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2rem;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left;" class="db-table">
+                <thead>
+                    <tr>
+                        <th>Specifications</th>
+                        <th>Basic</th>
+                        <th>Professional</th>
+                        <th>Enterprise</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Vector Memory Storage</td>
+                        <td>100MB</td>
+                        <td>5GB</td>
+                        <td>Unlimited / Dedicated Space</td>
+                    </tr>
+                    <tr>
+                        <td>Residential Proxies</td>
+                        <td><i class="fa-solid fa-times" style="color: var(--accent);"></i></td>
+                        <td><i class="fa-solid fa-check" style="color: var(--secondary);"></i></td>
+                        <td><i class="fa-solid fa-check" style="color: var(--secondary);"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Slack & Teams Webhooks</td>
+                        <td><i class="fa-solid fa-check" style="color: var(--secondary);"></i></td>
+                        <td><i class="fa-solid fa-check" style="color: var(--secondary);"></i></td>
+                        <td><i class="fa-solid fa-check" style="color: var(--secondary);"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Emergency Node Failovers</td>
+                        <td><i class="fa-solid fa-times" style="color: var(--accent);"></i></td>
+                        <td><i class="fa-solid fa-times" style="color: var(--accent);"></i></td>
+                        <td><i class="fa-solid fa-check" style="color: var(--secondary);"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 6. Add-ons pricing panel Section -->
+    <section id="addons">
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;" class="hero-grid">
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div class="subtitle-badge">Add-ons</div>
+                <h2 class="sec-title" style="text-align: left; margin-bottom: 0;">Residential proxy upgrades</h2>
+                <p>Equip your worker tasks with rotating residential proxy capabilities to read structured data across regional limits without triggering rate restrictions.</p>
+                <p>Each additional 50GB proxy bandwidth token costs ₹1,500, expiring one year from allocation date.</p>
+            </div>
+            <div class="glass-card" style="display: flex; flex-direction: column; gap: 1rem;">
+                <div style="display: flex; justify-content: space-between;">
+                    <strong>50GB Proxy Bundle</strong>
+                    <strong>₹1,500</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <strong>100GB Proxy Bundle</strong>
+                    <strong>₹2,800</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <strong>1000 LLM Token Call Block</strong>
+                    <strong>₹800</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Savings Comparison chart Section -->
+    <section id="savings-chart" style="background: rgba(12, 7, 30, 0.4); border-top: 1px solid rgba(157, 78, 221, 0.08); border-bottom: 1px solid rgba(157, 78, 221, 0.08);">
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center;" class="hero-grid">
+            <div>
+                <div class="subtitle-badge">Cost Impact</div>
+                <h2 class="sec-title" style="text-align: left; margin-bottom: 1.5rem;">Conserve engineering operations budget</h2>
+                <p style="margin-bottom: 1rem;">Typical cloud orchestration requires continuous code revisions as websites adjust styling formats.</p>
+                <p>Stackly's visual self-repair rules modify selectors automatically, eliminating recurring designer or software repair bills.</p>
+            </div>
+            <div class="glass-card" style="text-align: center; padding: 2rem;">
+                <h4>Standard manual workflow cost vs Stackly</h4>
+                <div style="display: flex; gap: 2rem; justify-content: center; align-items: flex-end; height: 180px; margin-top: 1.5rem;">
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div style="width: 50px; height: 130px; background: var(--accent); border-radius: 8px 8px 0 0;"></div>
+                        <span style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--text-muted);">Manual dev</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div style="width: 50px; height: 25px; background: var(--secondary); border-radius: 8px 8px 0 0;"></div>
+                        <span style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--text-muted);">Stackly automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Enterprise Custom Quote Form Section -->
+    <section id="custom-quote-form">
+        <div class="sec-title-wrap">
+            <div class="subtitle-badge">Custom Quote</div>
+            <h2 class="sec-title">Need specialized server configurations?</h2>
+            <p class="sec-desc">Submit your metrics targets, and our engineering architect will build a custom deployment quote.</p>
+        </div>
+        <div style="max-width: 500px; margin: 0 auto;">
+            <form data-action="contact.html">
+                <div class="form-group">
+                    <input type="text" placeholder="Company Legal Name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" placeholder="Target runs capacity / day" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem;">Submit Quote Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 9. FAQ Accordions Section -->
+    <section id="pricing-faq" style="background: rgba(12, 7, 30, 0.4); border-top: 1px solid rgba(157, 78, 221, 0.08); border-bottom: 1px solid rgba(157, 78, 221, 0.08);">
+        <div class="sec-title-wrap">
+            <div class="subtitle-badge">FAQ</div>
+            <h2 class="sec-title">Pricing questions</h2>
+        </div>
+        <div style="max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
+            <div class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; padding: 1.2rem; cursor: pointer;">
+                <div class="faq-question" style="font-weight: 600; display: flex; justify-content: space-between;">What happens if I exceed monthly execution levels? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer" style="margin-top: 1rem; color: var(--text-muted); font-size: 0.95rem; display: none;">Operations temporarily buffer into a queue. You will receive an email prompting you to add a flex-runs block or upgrade to Professional.</div>
+            </div>
+            <div class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; padding: 1.2rem; cursor: pointer;">
+                <div class="faq-question" style="font-weight: 600; display: flex; justify-content: space-between;">Can I cancel my yearly subscription midway? <i class="fas fa-plus"></i></div>
+                <div class="faq-answer" style="margin-top: 1rem; color: var(--text-muted); font-size: 0.95rem; display: none;">Yes. You will maintain access until the end of your billing cycle. We do not provide partial refunds for cancelled cycles.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Trial Promo CTA Section -->
+    <section id="trial-cta">
+        <div class="sec-title-wrap">
+            <div class="subtitle-badge">Promo</div>
+            <h2 class="sec-title">Try free for fourteen days</h2>
+            <p class="sec-desc">Test our Professional capabilities at zero charge. No credit details required.</p>
+        </div>
+        <div style="max-width: 500px; margin: 0 auto;">
+            <form data-action="signup.html">
+                <div class="form-group">
+                    <input type="email" placeholder="Enter business email" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem;">Start Free Trial</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Common Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-info">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.webp" alt="Logo">
+                    Stack<span>ly</span>
+                </a>
+                <p>State-of-the-art SaaS platform providing cloud execution spaces and cognitive AI pipelines for enterprise workflows.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="services.html">SLA Metrics</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact HQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Receive notifications regarding system releases and upcoming service capabilities.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Stackly Inc. All rights reserved.</p>
+            <p style="font-size: 0.85rem;">Bengaluru HQ: Outer Ring Rd, Bellandur, Bengaluru, Karnataka 560103</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Custom Tasks Calculator Slider
+        const slider = document.getElementById('task-calc-slider');
+        const tasksLabel = document.getElementById('tasks-label');
+        const costVal = document.getElementById('custom-cost-value');
+
+        if (slider && tasksLabel && costVal) {
+            slider.addEventListener('input', () => {
+                const val = parseInt(slider.value);
+                tasksLabel.innerText = `${val.toLocaleString()} Runs`;
+                
+                // Base cost math in Rupees
+                const cost = Math.round(3999 + ((val - 10000) / 990000) * 68000);
+                costVal.innerText = `₹${cost.toLocaleString('en-IN')}/mo`;
+            });
+        }
+
+        // Toggle pricing classes in faq
+        const items = document.querySelectorAll('.faq-item');
+        items.forEach(it => {
+            it.addEventListener('click', () => {
+                const ans = it.querySelector('.faq-answer');
+                const icon = it.querySelector('.faq-question i');
+                if (ans) {
+                    if (ans.style.display === 'block') {
+                        ans.style.display = 'none';
+                        if (icon) icon.className = 'fas fa-plus';
+                    } else {
+                        ans.style.display = 'block';
+                        if (icon) icon.className = 'fas fa-minus';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    <meta name="description" content="Deep-dive into Stackly’s technical features, proxy layers, and JSON workflows.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 1. Preloader Section -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo"><img src="images/logo.webp" alt="Logo"> Stack<span>ly</span></div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Common Navigation Header -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo.webp" alt="Logo">
+            Stack<span>ly</span>
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="features.html" class="active">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-ctas-pill">
+                <a href="signup.html" class="btn-pill btn-pill-primary">Sign Up</a>
+                <a href="login.html" class="btn-pill btn-pill-secondary">Login</a>
+            </div>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- 2. Features Hero Section -->
+    <section id="features-hero" style="padding-top: 10rem; text-align: center;">
+        <div class="glow-dot" style="top: 10%; right: 10%; width: 350px; height: 350px;"></div>
+        <div class="sec-title-wrap">
+            <div class="subtitle-badge">System Features</div>
+            <h1 style="font-size: 3.5rem; background: linear-gradient(135deg, #ffffff 40%, var(--text-muted)); background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1.5rem;">Engineered for Operations at Scale</h1>
+            <p class="sec-desc" style="font-size: 1.15rem;">Explore the technical mechanics driving Stackly's stateless worker sandboxes and vector data connections.</p>
+        </div>
+    </section>
+
+    <!-- 3. Secure Shield Vault Section -->
+    <section id="security-vault" style="background: rgba(12, 7, 30, 0.4); border-top: 1px solid rgba(157, 78, 221, 0.08); border-bottom: 1px solid rgba(157, 78, 221, 0.08);">
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;" class="hero-grid">
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div class="subtitle-badge">Vault Security</div>
+                <h2 class="sec-title" style="text-align: left; margin-bottom: 0;">AES-256 Variable Encryption</h2>
+                <p>All authentication headers, database keys, and configuration secrets are stored under strict zero-knowledge encryption guidelines.</p>
+                <p>Decryption keys only instantiate inside isolated sandbox workers during active runs, preventing cache exposures.</p>
+            </div>
+            <div class="glass-card" style="display: flex; gap: 1rem; align-items: center; border-color: var(--secondary);">
+                <i class="fa-solid fa-lock-open" style="font-size: 3rem; color: var(--secondary);"></i>
+                <div>
+                    <h4 style="margin-bottom: 0.2rem;">ISO-27001 Metrics</h4>
+                    <p style="font-size: 0.9rem;">Regularly audited for structural data compliance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Multi-Agent Flowchart Section -->
+    <section id="flowchart-section">
+        <div class="sec-title-wrap">
+            <div class="subtitle-badge">Agent Network</div>
+            <h2 class="sec-title">Collaborative Worker Pipelines</h2>
+            <p class="sec-desc">Stackly workers communicate state anomalies between themselves to adjust process execution.</p>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: 1fr 50px 1fr 50px 1fr; gap: 1rem; align-items: center; text-align: center;" class="hero-grid">
+            <div class="glass-card">
+                <h5>Scraper Node</h5>
+                <p style="font-size: 0.8rem; margin-top: 0.5rem;">Scrapes site tables.</p>
+            </div>
+            <div style="font-size: 1.5rem; color: var(--secondary);"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="glass-card" style="border-color: var(--primary);">
+                <h5>LLM Classifier</h5>
+                <p style="font-size: 0.8rem; margin-top: 0.5rem;">Evaluates content variables.</p>
+            </div>
+            <div style="font-size: 1.5rem; color: var(--primary);"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="glass-card" style="border-color: var(--accent);">
+                <h5>DB Sync Node</h5>
+                <p style="font-size: 0.8rem; margin-top: 0.5rem;">Commits changes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Terminal Emulator Log Section -->
+    <section id="terminal-section" style="background: rgba(12, 7, 30, 0.4); border-top: 1px solid rgba(157, 78, 221, 0.08); border-bottom: 1px solid rgba(157, 78, 221, 0.08);">
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center;" class="hero-grid">
+            <div>
+                <div class="subtitle-badge">Live Monitor</div>
+                <h2 class="sec-title" style="text-align: left; margin-bottom: 1.5rem;">Real-time logging stream</h2>
+                <p style="margin-bottom: 1rem;">View real-time worker logs showing direct sandbox setup parameters, proxy connections, and database executions.</p>
+                <p>Encountered exceptions display full details, highlighting lines where parsing structures failed.</p>
+            </div>
+            <div style="background: #030107; border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; font-family: monospace; font-size: 0.85rem; height: 260px; overflow-y: auto; color: #a49fc6;" id="terminal-logs">
+                <div>[00:01:02] Initializing Node Bengaluru-South...</div>
+                <div>[00:01:03] Container sandbox ID: 418ad932 active.</div>
+                <div>[00:01:04] Executing scraper pipeline...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Webhooks Code Sandbox Section -->
+    <section id="code-sandbox">
+        <div class="sec-title-wrap">
+            <div class="subtitle-badge">Developer Sandbox</div>
+            <h2 class="sec-title">Webhook Configuration Payload</h2>
+            <p class="sec-desc">Deploy webhook setups instantly by passing structured JSON variables directly to our endpoints.</p>
+        </div>
+        <div style="max-width: 600px; margin: 0 auto;" class="glass-card">
+            <div style="background: #030107; border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; font-family: monospace; font-size: 0.9rem; color: var(--secondary); margin-bottom: 1.5rem;">
+<pre>{
+  "event": "automation.dispatch",
+  "node": "India-South-1",
+  "variables": {
+    "target_url": "https://company.in/dashboard",
+    "retries": 3
+  }
+}</pre>
+            </div>
+            <button type="button" class="btn btn-secondary" style="width: 100%;" onclick="alert('Webhook simulated! Output routed to 404.')">Execute Sample Webhook Payload</button>
+        </div>
+    </section>
+
+    <!-- 7. Cloud Nodes Allocator Section -->
+    <section id="node-allocator" style="background: rgba(12, 7, 30, 0.4); border-top: 1px solid rgba(157, 78, 221, 0.08); border-bottom: 1px solid rgba(157, 78, 221, 0.08);">
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;" class="hero-grid">
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div class="subtitle-badge">Scalability Control</div>
+                <h2 class="sec-title" style="text-align: left; margin-bottom: 0;">Allocate worker nodes dynamically</h2>
+                <p>Adjust the slider to simulate how Stackly spins up parallel sandboxes depending on input queues.</p>
+                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                        <strong>Allocated Workers</strong>
+                        <strong style="color: var(--secondary);" id="allocated-count">10 Nodes</strong>
+                    </div>
+                    <input type="range" min="1" max="100" value="10" class="roi-slider" id="allocator-slider" style="width: 100%; accent-color: var(--secondary); cursor: pointer;">
+                </div>
+            </div>
+            <div class="glass-card" style="display: flex; flex-direction: column; gap: 1rem;">
+                <h4><i class="fa-solid fa-server" style="color: var(--secondary);"></i> Instantiation: 4.2 Seconds</h4>
+                <h4><i class="fa-solid fa-network-wired" style="color: var(--primary);"></i> Bandwidth: 10 Gbps Node-to-Node</h4>
+                <h4><i class="fa-solid fa-microchip" style="color: var(--accent);"></i> Failover: Automatic Node Migration</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Enterprise Metrics Reporting Section -->
+    <section id="metrics-reports">
+        <div class="sec-title-wrap">
+            <div class="subtitle-badge">Reporting</div>
+            <h2 class="sec-title">Enterprise operations dashboard metrics</h2>
+            <p class="sec-desc">Observe execution analytics showing CPU efficiency, memory footprint, and success logs.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+            <div class="glass-card">
+                <i class="fa-solid fa-clock-rotate-left" style="font-size: 2rem; color: var(--secondary); margin-bottom: 1.2rem;"></i>
+                <h4 style="margin-bottom: 0.8rem;">Historical Auditing</h4>
+                <p>Retrieve full console outputs and screen frame states for execution runs dating back 90 days.</p>
+            </div>
+            <div class="glass-card">
+                <i class="fa-solid fa-file-export" style="font-size: 2rem; color: var(--primary); margin-bottom: 1.2rem;"></i>
+                <h4 style="margin-bottom: 0.8rem;">Custom Exports</h4>
+                <p>Dispatch scheduled emails or PDF logs summarizing workflow runs to your administrative team.</p>
+            </div>
+            <div class="glass-card">
+                <i class="fa-solid fa-triangle-exclamation" style="font-size: 2rem; color: var(--accent); margin-bottom: 1.2rem;"></i>
+                <h4 style="margin-bottom: 0.8rem;">Anomaly Detection</h4>
+                <p>Machine learning layers parse execution logs, flagging variations in processing latency parameters.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Feature Comparison checklist matrix Section -->
+    <section id="features-table" style="background: rgba(12, 7, 30, 0.4); border-top: 1px solid rgba(157, 78, 221, 0.08); border-bottom: 1px solid rgba(157, 78, 221, 0.08);">
+        <div class="sec-title-wrap">
+            <div class="subtitle-badge">Specs</div>
+            <h2 class="sec-title">Capabilities matrix</h2>
+        </div>
+        <div style="overflow-x: auto; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2rem;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left;" class="db-table">
+                <thead>
+                    <tr>
+                        <th>Capability</th>
+                        <th>Standard Tier</th>
+                        <th>Professional Tier</th>
+                        <th>Enterprise Spec</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Proxy Isolation</td>
+                        <td>Shared IP range</td>
+                        <td>Rotating Residential</td>
+                        <td>Dedicated Subnet pool</td>
+                    </tr>
+                    <tr>
+                        <td>Daily Runs Limit</td>
+                        <td>10,000</td>
+                        <td>250,000</td>
+                        <td>Unlimited / Custom scale</td>
+                    </tr>
+                    <tr>
+                        <td>Audit Duration Logs</td>
+                        <td>7 Days</td>
+                        <td>30 Days</td>
+                        <td>90 Days</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 10. Feature Sandbox activation form Section -->
+    <section id="activation-cta">
+        <div class="sec-title-wrap">
+            <div class="subtitle-badge">Start Free</div>
+            <h2 class="sec-title">Activate Sandbox Cluster</h2>
+            <p class="sec-desc">Input credentials to initialize a free developer tier environment.</p>
+        </div>
+        <div style="max-width: 500px; margin: 0 auto;">
+            <form data-action="signup.html">
+                <div class="form-group">
+                    <input type="email" placeholder="Business Email Address" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem;">Boot Sandbox Container</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Common Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-info">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.webp" alt="Logo">
+                    Stack<span>ly</span>
+                </a>
+                <p>State-of-the-art SaaS platform providing cloud execution spaces and cognitive AI pipelines for enterprise workflows.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="services.html">SLA Metrics</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact HQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Receive notifications regarding system releases and upcoming service capabilities.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Stackly Inc. All rights reserved.</p>
+            <p style="font-size: 0.85rem;">Bengaluru HQ: Outer Ring Rd, Bellandur, Bengaluru, Karnataka 560103</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Terminal log streamer
+        const term = document.getElementById('terminal-logs');
+        if (term) {
+            const logs = [
+                "[00:01:05] Connecting proxy gateway: 104.28.18.2...",
+                "[00:01:06] Connection established (24ms).",
+                "[00:01:08] Processing DOM table selectors...",
+                "[00:01:10] Parsing text values: complete.",
+                "[00:01:12] Synchronization webhook dispatched to AWS cluster."
+            ];
+            let idx = 0;
+            setInterval(() => {
+                const row = document.createElement('div');
+                row.innerText = logs[idx];
+                term.appendChild(row);
+                term.scrollTop = term.scrollHeight;
+                idx = (idx + 1) % logs.length;
+            }, 2500);
+        }
+
+        // Cloud Nodes Allocator Slider
+        const allocSlider = document.getElementById('allocator-slider');
+        const allocCount = document.getElementById('allocated-count');
+        if (allocSlider && allocCount) {
+            allocSlider.addEventListener('input', () => {
+                allocCount.innerText = `${allocSlider.value} Nodes`;
+            });
+        }
+    </script>
+</body>
+</html>

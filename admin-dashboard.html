@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo"><img src="images/logo.webp" alt="Logo"> Stack<span>ly</span></div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Mobile sidebar toggler -->
+    <div class="db-menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="dashboard-container">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="db-sidebar">
+            <div class="db-brand">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.webp" alt="Logo">
+                    Stack<span>ly</span>
+                </a>
+            </div>
+            
+            <ul class="db-menu">
+                <li class="db-menu-item active"><a href="#db-health"><i class="fa-solid fa-gauge-high"></i> System Health</a></li>
+                <li class="db-menu-item"><a href="#db-users"><i class="fa-solid fa-users-gear"></i> User Panel</a></li>
+                <li class="db-menu-item"><a href="#db-servers"><i class="fa-solid fa-server"></i> Server Status</a></li>
+                <li class="db-menu-item"><a href="#db-logs"><i class="fa-solid fa-terminal"></i> System Config</a></li>
+                <li class="db-menu-item" style="margin-top: auto;"><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a></li>
+            </ul>
+
+            <div class="db-user-panel">
+                <div class="db-user-avatar">SU</div>
+                <div class="db-user-details">
+                    <h5>Super Admin</h5>
+                    <span>Mumbai HQ Hub</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Side Viewport Workspace -->
+        <main class="db-content">
+            
+            <!-- Dashboard Header Info -->
+            <header style="position: static; padding: 0; background: transparent; backdrop-filter: none; border-bottom: none; display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem;" class="">
+                <div class="db-title">
+                    <h1>Administrative Console</h1>
+                    <p style="color: var(--text-muted);">Manage global server nodes, allocate proxy resources, and audit system performance logs.</p>
+                </div>
+            </header>
+
+            <!-- 1. System Health Section -->
+            <section id="db-health" class="db-section" style="padding: 0;">
+                <h3 class="db-sec-title">Global System Health</h3>
+                
+                <div class="db-grid">
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <span>Active System Users</span>
+                            <h3>14,820</h3>
+                        </div>
+                        <div class="stat-icon primary"><i class="fa-solid fa-users"></i></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <span>Global Cloud Nodes</span>
+                            <h3>42 active</h3>
+                        </div>
+                        <div class="stat-icon secondary"><i class="fa-solid fa-server"></i></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <span>Average Network Load</span>
+                            <h3>48%</h3>
+                        </div>
+                        <div class="stat-icon accent"><i class="fa-solid fa-microchip"></i></div>
+                    </div>
+                </div>
+
+                <!-- Server load chart -->
+                <div class="chart-panel">
+                    <div class="chart-header">
+                        <h4>Global Server CPU Capacity</h4>
+                        <span style="font-size: 0.85rem; color: var(--secondary);">Peak: 91%</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="adminServerChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. User Control Panel Section -->
+            <section id="db-users" class="db-section" style="padding: 0;">
+                <h3 class="db-sec-title">User Control Panel</h3>
+                
+                <div class="db-table-panel" style="margin-bottom: 3rem;">
+                    <table class="db-table">
+                        <thead>
+                            <tr>
+                                <th>Client Name</th>
+                                <th>Active Tiers</th>
+                                <th>Usage Runs</th>
+                                <th>Account Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>DataCore Systems Ltd.</td>
+                                <td>Enterprise Spec</td>
+                                <td>410,250</td>
+                                <td><span class="status-badge active">Verified</span></td>
+                            </tr>
+                            <tr>
+                                <td>HealthSync Care Ltd.</td>
+                                <td>Professional Plan</td>
+                                <td>189,450</td>
+                                <td><span class="status-badge active">Verified</span></td>
+                            </tr>
+                            <tr>
+                                <td>TechGenius Ltd.</td>
+                                <td>Basic Free Tier</td>
+                                <td>8,420</td>
+                                <td><span class="status-badge pending">Pending Audit</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- User Growth Line Chart -->
+                <div class="chart-panel">
+                    <div class="chart-header">
+                        <h4>User Growth History</h4>
+                        <span style="font-size: 0.85rem; color: var(--accent);">+320 verified this week</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="adminGrowthChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Server Cluster Status Section -->
+            <section id="db-servers" class="db-section" style="padding: 0;">
+                <h3 class="db-sec-title">Regional Server Clusters</h3>
+                
+                <div class="db-table-panel" style="margin-bottom: 3rem;">
+                    <table class="db-table">
+                        <thead>
+                            <tr>
+                                <th>Node ID Code</th>
+                                <th>Regional Zone</th>
+                                <th>Average Load</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Node India-South-1</td>
+                                <td>Bangalore, India</td>
+                                <td>42%</td>
+                                <td><span class="status-badge active">Online</span></td>
+                            </tr>
+                            <tr>
+                                <td>Node India-West-1</td>
+                                <td>Mumbai, India</td>
+                                <td>68%</td>
+                                <td><span class="status-badge active">Online</span></td>
+                            </tr>
+                            <tr>
+                                <td>Node India-East-1</td>
+                                <td>Chennai, India</td>
+                                <td>15%</td>
+                                <td><span class="status-badge pending">Idle</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="glass-card">
+                    <h4 style="margin-bottom: 1.5rem;">Allocate New Server Sandbox Container</h4>
+                    <form>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;" class="hero-grid">
+                            <div class="form-group">
+                                <label>Cluster Location Coordinate</label>
+                                <select class="form-control" required>
+                                    <option value="in-south">India-South-1 (Bangalore)</option>
+                                    <option value="in-west">India-West-1 (Mumbai)</option>
+                                    <option value="in-east">India-East-1 (Chennai)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>RAM Allocations (GB)</label>
+                                <input type="number" placeholder="e.g. 16" class="form-control" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Launch Cloud Container Node</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- 4. System Configurations Section -->
+            <section id="db-logs" class="db-section" style="padding: 0;">
+                <h3 class="db-sec-title">Global Configurations</h3>
+                
+                <div class="glass-card">
+                    <h4 style="margin-bottom: 1.5rem;">Adjust System Variable Constraints</h4>
+                    <form>
+                        <div class="form-group">
+                            <label>Default Sandbox Runtime Expiry Limit (Secs)</label>
+                            <input type="number" value="1800" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Global Rate Limit Cap (Per Token Key)</label>
+                            <input type="number" value="5000" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Update System Configurations</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

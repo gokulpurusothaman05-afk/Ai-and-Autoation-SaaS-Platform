@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo"><img src="images/logo.webp" alt="Logo"> Stack<span>ly</span></div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Mobile sidebar toggler -->
+    <div class="db-menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="dashboard-container">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="db-sidebar">
+            <div class="db-brand">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.webp" alt="Logo">
+                    Stack<span>ly</span>
+                </a>
+            </div>
+            
+            <ul class="db-menu">
+                <li class="db-menu-item active"><a href="#db-overview"><i class="fa-solid fa-gauge-high"></i> Overview</a></li>
+                <li class="db-menu-item"><a href="#db-automations"><i class="fa-solid fa-robot"></i> Active Agents</a></li>
+                <li class="db-menu-item"><a href="#db-api"><i class="fa-solid fa-key"></i> API Settings</a></li>
+                <li class="db-menu-item"><a href="#db-billing"><i class="fa-solid fa-credit-card"></i> Billing Details</a></li>
+                <li class="db-menu-item"><a href="#db-support"><i class="fa-solid fa-headset"></i> Get Help</a></li>
+                <li class="db-menu-item" style="margin-top: auto;"><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a></li>
+            </ul>
+
+            <div class="db-user-panel">
+                <div class="db-user-avatar">CU</div>
+                <div class="db-user-details">
+                    <h5>Client User</h5>
+                    <span>Bengaluru Office</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Side Viewport Main Workspace -->
+        <main class="db-content">
+            
+            <!-- Dashboard Header Info -->
+            <header style="position: static; padding: 0; background: transparent; backdrop-filter: none; border-bottom: none; display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem;" class="">
+                <div class="db-title">
+                    <h1>Client Workspace</h1>
+                    <p style="color: var(--text-muted);">Manage your active AI nodes and operational metrics.</p>
+                </div>
+            </header>
+
+            <!-- 1. Overview Section -->
+            <section id="db-overview" class="db-section" style="padding: 0;">
+                <h3 class="db-sec-title">Operational Overview</h3>
+                
+                <div class="db-grid">
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <span>Active AI Agents</span>
+                            <h3>12 / 15</h3>
+                        </div>
+                        <div class="stat-icon primary"><i class="fa-solid fa-robot"></i></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <span>Total Executions</span>
+                            <h3>85,420</h3>
+                        </div>
+                        <div class="stat-icon secondary"><i class="fa-solid fa-bolt"></i></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <span>Billing Pipeline Cost</span>
+                            <h3>₹10,500.00</h3>
+                        </div>
+                        <div class="stat-icon accent"><i class="fa-solid fa-wallet"></i></div>
+                    </div>
+                </div>
+
+                <!-- API Usage Graph Panel -->
+                <div class="chart-panel">
+                    <div class="chart-header">
+                        <h4>API Requests History</h4>
+                        <span style="font-size: 0.85rem; color: var(--secondary);">+12.4% vs last month</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="clientUsageChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. Active Automations Section -->
+            <section id="db-automations" class="db-section" style="padding: 0;">
+                <h3 class="db-sec-title">Active AI Agents</h3>
+                
+                <div class="db-table-panel" style="margin-bottom: 3rem;">
+                    <table class="db-table">
+                        <thead>
+                            <tr>
+                                <th>Agent Description</th>
+                                <th>Schedule Coordinates</th>
+                                <th>Runs (24h)</th>
+                                <th>Health Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ledger Ingestion Scraper</td>
+                                <td>Every 10 Mins</td>
+                                <td>144</td>
+                                <td><span class="status-badge active">Online</span></td>
+                            </tr>
+                            <tr>
+                                <td>Customer Reply classifier</td>
+                                <td>Continuous (Piped)</td>
+                                <td>1,280</td>
+                                <td><span class="status-badge active">Online</span></td>
+                            </tr>
+                            <tr>
+                                <td>Logs Anomaly Scanner</td>
+                                <td>Hourly Triggers</td>
+                                <td>24</td>
+                                <td><span class="status-badge pending">Idle</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Success Rate Graph Panel -->
+                <div class="chart-panel">
+                    <div class="chart-header">
+                        <h4>Execution Success Rate</h4>
+                        <span style="font-size: 0.85rem; color: var(--primary);">Avg 98.32%</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="clientSuccessChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. API Settings Section -->
+            <section id="db-api" class="db-section" style="padding: 0;">
+                <h3 class="db-sec-title">API Settings</h3>
+                
+                <div class="glass-card" style="margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">Primary Access Key</h4>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                        <input type="text" value="sk_live_51Nv924B2sL82a819dJ2b..." class="form-control" style="flex-grow: 1; font-family: monospace;" readonly>
+                        <button class="btn btn-secondary" onclick="alert('Key Copied!')"><i class="fa-solid fa-copy"></i> Copy</button>
+                    </div>
+                    <p style="font-size: 0.85rem;">Do not share your primary API token key variables. Decryption actions happen inside stateless runners.</p>
+                </div>
+
+                <div class="glass-card">
+                    <h4 style="margin-bottom: 1.5rem;">Generate Custom Webhook Node</h4>
+                    <form>
+                        <div class="form-group">
+                            <label>Destination Webhook URL</label>
+                            <input type="url" placeholder="https://api.yourdomain.in/v1/callback" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Generate Callback Setup</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- 4. Billing Details Section -->
+            <section id="db-billing" class="db-section" style="padding: 0;">
+                <h3 class="db-sec-title">Billing Details</h3>
+                
+                <div class="db-grid" style="margin-bottom: 2rem;">
+                    <div class="glass-card">
+                        <span style="color: var(--text-muted); font-size: 0.9rem;">Current Subscription Plan</span>
+                        <h4 style="font-size: 1.8rem; margin: 0.5rem 0 1rem; color: var(--secondary);">Professional Tiers</h4>
+                        <p style="font-size: 0.85rem;">Renews on: August 1, 2026</p>
+                    </div>
+                    <div class="glass-card">
+                        <span style="color: var(--text-muted); font-size: 0.9rem;">Add-on Proxy Usage</span>
+                        <h4 style="font-size: 1.8rem; margin: 0.5rem 0 1rem; color: var(--primary);">12.4 GB / 50 GB</h4>
+                        <p style="font-size: 0.85rem;">Token expires: December 14, 2026</p>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <h4 style="margin-bottom: 1.5rem;">Card Payment Variables</h4>
+                    <form>
+                        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem;" class="hero-grid">
+                            <div class="form-group">
+                                <label>Cardholder Name</label>
+                                <input type="text" placeholder="Owner Name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Card Number</label>
+                                <input type="text" placeholder="XXXX XXXX XXXX XXXX" class="form-control" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Update Billing Variables</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- 5. Support Section -->
+            <section id="db-support" class="db-section" style="padding: 0;">
+                <h3 class="db-sec-title">Get Support Help</h3>
+                
+                <div class="glass-card">
+                    <h4 style="margin-bottom: 1rem;">Open priority assistance ticket</h4>
+                    <p style="margin-bottom: 1.5rem; font-size: 0.9rem;">Client support tickets route to Bengaluru Solutions Architects directly. Expect responses in under 2 hours.</p>
+                    
+                    <form>
+                        <div class="form-group">
+                            <label>Subject Topic</label>
+                            <input type="text" placeholder="Issue Subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Description of Issue</label>
+                            <textarea placeholder="Describe details of error log..." class="form-control" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Dispatch Emergency Ticket</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

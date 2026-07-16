@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    <meta name="description" content="Deploy custom autonomous agents, orchestrate complex software integrations, and scale operations with zero manual bottlenecks.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 1. Preloader Section -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo"><img src="images/logo.webp" alt="Logo"> Stack<span>ly</span></div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Common Navigation Header (Mimicking screenshot navigation) -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo.webp" alt="Logo">
+            Stack<span>ly</span>
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-ctas-pill">
+                <a href="signup.html" class="btn-pill btn-pill-primary">Sign Up</a>
+                <a href="login.html" class="btn-pill btn-pill-secondary">Login</a>
+            </div>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section (Replicating screenshot layout) -->
+    <div class="hero-wrapper">
+        <div class="hero-bg-text">Stackly</div>
+        
+        <div class="hero-canvas-container">
+            <canvas id="sphere-canvas" style="width: 100%; height: 100%; max-width: 500px; max-height: 500px;"></canvas>
+        </div>
+
+        <div class="hero-year">2026</div>
+
+        <div class="hero-socials">
+            <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
+            <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="404.html"><i class="fa-brands fa-github"></i></a>
+        </div>
+
+        <div class="hero-about-desc">
+            <span>• About Us</span>
+            <p>Deploy custom autonomous agents, orchestrate complex software integrations, and scale operations with zero manual bottlenecks.</p>
+        </div>
+
+       
+    </div>
+
+    <!-- 3. Partner Trust Logo Bar Section -->
+    <section id="partners" style="padding: 4rem 8%; background: rgba(12, 7, 30, 0.4); border-top: 1px solid rgba(157, 78, 221, 0.1); border-bottom: 1px solid rgba(157, 78, 221, 0.1);">
+        <p style="text-align: center; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 2rem; color: var(--text-muted); font-weight: 700;">Trusted by tech leaders across India</p>
+        <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 2.5rem; opacity: 0.65;">
+            <span style="font-size: 1.4rem; font-weight: 700; font-family: var(--font-outfit); color: #fff;"><i class="fa-brands fa-amazon" style="margin-right: 0.5rem;"></i> Amazon In</span>
+            <span style="font-size: 1.4rem; font-weight: 700; font-family: var(--font-outfit); color: #fff;"><i class="fa-brands fa-microsoft" style="margin-right: 0.5rem;"></i> MicroSoft</span>
+            <span style="font-size: 1.4rem; font-weight: 700; font-family: var(--font-outfit); color: #fff;"><i class="fa-brands fa-salesforce" style="margin-right: 0.5rem;"></i> Salesforce</span>
+            <span style="font-size: 1.4rem; font-weight: 700; font-family: var(--font-outfit); color: #fff;"><i class="fa-brands fa-google" style="margin-right: 0.5rem;"></i> Google Cloud</span>
+            <span style="font-size: 1.4rem; font-weight: 700; font-family: var(--font-outfit); color: #fff;"><i class="fa-brands fa-github" style="margin-right: 0.5rem;"></i> GitHub In</span>
+        </div>
+    </section>
+
+    <!-- 4. Key Stats Counters Section -->
+    <section id="stats">
+        <div class="glow-dot" style="bottom: 10%; right: 10%; width: 250px; height: 250px;"></div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; text-align: center;">
+            <div>
+                <h3 style="font-size: 3.5rem; color: var(--secondary); margin-bottom: 0.5rem;">98.4%</h3>
+                <p style="text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; color: var(--text-muted); font-weight: 700;">Task Success Rate</p>
+            </div>
+            <div>
+                <h3 style="font-size: 3.5rem; color: var(--primary); margin-bottom: 0.5rem;">4.2M</h3>
+                <p style="text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; color: var(--text-muted); font-weight: 700;">Daily Executions</p>
+            </div>
+            <div>
+                <h3 style="font-size: 3.5rem; color: var(--accent); margin-bottom: 0.5rem;">&lt; 35ms</h3>
+                <p style="text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; color: var(--text-muted); font-weight: 700;">Average Latency</p>
+            </div>
+            <div>
+                <h3 style="font-size: 3.5rem; color: #ffffff; margin-bottom: 0.5rem;">₹45K+</h3>
+                <p style="text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; color: var(--text-muted); font-weight: 700;">Saved per Client</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Core Capability Grid Section -->
+    <section id="services">
+        <div class="sec-title-wrap">
+            <div class="subtitle-badge">Platform Core</div>
+            <h2 class="sec-title">What we automate</h2>
+            <p class="sec-desc">Offload repetitive, error-prone tasks to autonomous agents running inside customized virtual environments.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.2rem;">
+            <div class="glass-card">
+                <i class="fa-solid fa-bolt" style="font-size: 2.2rem; color: var(--secondary); margin-bottom: 1.5rem; display: block;"></i>
+                <h3 style="margin-bottom: 1rem; font-size: 1.4rem;">Robotic Process Automation</h3>
+                <p>Execute browser workflows, fill forms, scrape complex modern dynamic single-page web applications with zero script failures.</p>
+            </div>
+            <div class="glass-card">
+                <i class="fa-solid fa-brain" style="font-size: 2.2rem; color: var(--primary); margin-bottom: 1.5rem; display: block;"></i>
+                <h3 style="margin-bottom: 1rem; font-size: 1.4rem;">Cognitive AI Agents</h3>
+                <p>Utilize integrated Large Language Models to classify support messages, synthesize documentation, and make runtime decisions.</p>
+            </div>
+            <div class="glass-card">
+                <i class="fa-solid fa-chart-line" style="font-size: 2.2rem; color: var(--accent); margin-bottom: 1.5rem; display: block;"></i>
+                <h3 style="margin-bottom: 1rem; font-size: 1.4rem;">Predictive Server Scaling</h3>
+                <p>Analyze server memory utilization and traffic overhead metrics, launching new server nodes automatically in under 4 seconds.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Live ROI Calculator Section -->
+    <section id="roi" style="background: rgba(12, 7, 30, 0.4); border-top: 1px solid rgba(157, 78, 221, 0.08); border-bottom: 1px solid rgba(157, 78, 221, 0.08);">
+        <div class="glow-dot" style="bottom: 5%; right: 10%; width: 250px; height: 250px;"></div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;" class="hero-grid">
+            <div>
+                <div class="subtitle-badge">Interactive Tool</div>
+                <h2 class="sec-title" style="text-align: left; margin-bottom: 1.5rem;">Calculate your automation savings</h2>
+                <p style="margin-bottom: 2rem;">Adjust the slider to estimate how much engineering hours and budget you conserve monthly by transferring manual processes to Stackly agents.</p>
+                <div class="roi-container" style="background: rgba(255,255,255,0.015); border: 1px solid var(--border-color); border-radius: 24px; padding: 2.2rem;">
+                    <h4 style="font-size: 1.4rem; margin-bottom: 0.5rem; font-family: var(--font-outfit);">If you automate <span id="tasks-count" style="color: var(--secondary);">1000</span> tasks per month:</h4>
+                    <div style="margin: 1.8rem 0;" class="roi-slider-wrap">
+                        <input type="range" min="100" max="10000" step="100" value="1000" class="roi-slider" id="roi-tasks" style="width: 100%; accent-color: var(--accent); cursor: pointer;">
+                    </div>
+                    <p style="margin-bottom: 1rem; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Estimated Monthly Savings:</p>
+                    <div class="roi-result" id="roi-value" style="font-size: 3.2rem; font-weight: 900; color: #ffffff; text-shadow: 0 0 15px rgba(0, 255, 255, 0.2); font-family: var(--font-outfit);">₹1,20,000</div>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 2rem;">
+                <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                    <div style="width: 54px; height: 54px; border-radius: 50%; background: rgba(0, 255, 255, 0.08); border: 1px solid var(--secondary); display: flex; justify-content: center; align-items: center; flex-shrink: 0; color: var(--secondary); font-size: 1.2rem;"><i class="fa-solid fa-clock"></i></div>
+                    <div>
+                        <h4 style="margin-bottom: 0.4rem; font-size: 1.2rem; font-family: var(--font-outfit);">Saves 18 Mins per Task</h4>
+                        <p>Stackly processes typical browser-based forms and scraping workflows 40x faster than standard operators.</p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                    <div style="width: 54px; height: 54px; border-radius: 50%; background: rgba(157, 78, 221, 0.08); border: 1px solid var(--primary); display: flex; justify-content: center; align-items: center; flex-shrink: 0; color: var(--primary); font-size: 1.2rem;"><i class="fa-solid fa-code-compare"></i></div>
+                    <div>
+                        <h4 style="margin-bottom: 0.4rem; font-size: 1.2rem; font-family: var(--font-outfit);">Zero Maintenance Latency</h4>
+                        <p>No developer overhead or ongoing API update monitoring needed. Agent logic repairs structure anomalies automatically.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Integration Workflow Timeline Section -->
+    <section id="timeline">
+        <div class="sec-title-wrap">
+            <div class="subtitle-badge">Workflow</div>
+            <h2 class="sec-title">Deploy in 3 steps</h2>
+            <p class="sec-desc">Integrate our system with your existing tools in under fifteen minutes.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3.5rem; position: relative;">
+            <div style="text-align: center; position: relative;">
+                <div style="width: 76px; height: 76px; border-radius: 50%; background: rgba(255,255,255,0.02); border: 2px solid var(--secondary); display: flex; justify-content: center; align-items: center; font-size: 2rem; font-weight: 800; color: var(--secondary); margin: 0 auto 1.5rem; box-shadow: 0 0 20px var(--secondary-glow); font-family: var(--font-outfit);">1</div>
+                <h3 style="margin-bottom: 1rem; font-size: 1.35rem;">Connect Services</h3>
+                <p>Link your databases, cloud nodes, and external platforms via secure OAuth callback setups.</p>
+            </div>
+            <div style="text-align: center; position: relative;">
+                <div style="width: 76px; height: 76px; border-radius: 50%; background: rgba(255,255,255,0.02); border: 2px solid var(--primary); display: flex; justify-content: center; align-items: center; font-size: 2rem; font-weight: 800; color: var(--primary); margin: 0 auto 1.5rem; box-shadow: 0 0 20px var(--primary-glow); font-family: var(--font-outfit);">2</div>
+                <h3 style="margin-bottom: 1rem; font-size: 1.35rem;">Configure Agent</h3>
+                <p>Define task triggers, runtime schedules, and fallback rules using the plain-text config editor.</p>
+            </div>
+            <div style="text-align: center; position: relative;">
+                <div style="width: 76px; height: 76px; border-radius: 50%; background: rgba(255,255,255,0.02); border: 2px solid var(--accent); display: flex; justify-content: center; align-items: center; font-size: 2rem; font-weight: 800; color: var(--accent); margin: 0 auto 1.5rem; box-shadow: 0 0 20px var(--accent-glow); font-family: var(--font-outfit);">3</div>
+                <h3 style="margin-bottom: 1rem; font-size: 1.35rem;">Launch Cluster</h3>
+                <p>Hit deployment and observe your automated operations execute across multiple sandboxes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Detailed Features Matrix Section -->
+    <section id="features" style="background: rgba(12, 7, 30, 0.3); border-top: 1px solid rgba(157, 78, 221, 0.08); border-bottom: 1px solid rgba(157, 78, 221, 0.08);">
+        <div class="sec-title-wrap">
+            <div class="subtitle-badge">Platform Overview</div>
+            <h2 class="sec-title">Enterprise Security & Performance</h2>
+            <p class="sec-desc">Designed to support high-throughput financial and health systems with robust isolations.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+            <div class="glass-card" style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                <i class="fa-solid fa-shield-halved" style="font-size: 2rem; color: var(--secondary); padding-top: 0.3rem;"></i>
+                <div>
+                    <h4 style="margin-bottom: 0.6rem; font-size: 1.25rem; font-family: var(--font-outfit);">Sandbox Isolation</h4>
+                    <p>Every worker executes in a unique container, destroying environment variables upon task completion.</p>
+                </div>
+            </div>
+            <div class="glass-card" style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                <i class="fa-solid fa-network-wired" style="font-size: 2rem; color: var(--primary); padding-top: 0.3rem;"></i>
+                <div>
+                    <h4 style="margin-bottom: 0.6rem; font-size: 1.25rem; font-family: var(--font-outfit);">Proxies Support</h4>
+                    <p>Avoid geographic IP blocks. Rotate tasks across thousands of secure residential server hubs.</p>
+                </div>
+            </div>
+            <div class="glass-card" style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                <i class="fa-solid fa-code" style="font-size: 2rem; color: var(--accent); padding-top: 0.3rem;"></i>
+                <div>
+                    <h4 style="margin-bottom: 0.6rem; font-size: 1.25rem; font-family: var(--font-outfit);">JSON Configuration</h4>
+                    <p>Export whole workflow networks as configuration documents to version-control structures in Git.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Success Stories (Carousel Section) -->
+    <section id="testimonials">
+        <div class="sec-title-wrap">
+            <div class="subtitle-badge">Success Stories</div>
+            <h2 class="sec-title">Trusted globally</h2>
+            <p class="sec-desc">See how leading tech companies use Stackly to transform operational pipelines.</p>
+        </div>
+        <div class="carousel-container" style="position: relative; max-width: 800px; margin: 0 auto; overflow: hidden; padding: 1rem 0;">
+            <div class="carousel-track" style="display: flex; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); gap: 20px;">
+                <div class="testimonial-card" style="flex: 0 0 100%; background: rgba(20, 12, 45, 0.4); border: 1px solid var(--border-color); border-radius: 24px; padding: 3rem; text-align: center; position: relative; backdrop-filter: blur(10px);">
+                    <i class="fa-solid fa-quote-left" style="font-size: 2.2rem; color: var(--accent); margin-bottom: 1.8rem;"></i>
+                    <p style="font-size: 1.15rem; margin-bottom: 2rem; font-style: italic; line-height: 1.6; color: #fff;">"Stackly reduced our user onboarding delay from 2 hours to under 4 seconds. The robotic process flow is flawless."</p>
+                    <h4 style="margin-bottom: 0.3rem; font-family: var(--font-outfit);">Sarah Jenkins</h4>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Director of Operations, DataCore</span>
+                </div>
+                <div class="testimonial-card" style="flex: 0 0 100%; background: rgba(20, 12, 45, 0.4); border: 1px solid var(--border-color); border-radius: 24px; padding: 3rem; text-align: center; position: relative; backdrop-filter: blur(10px);">
+                    <i class="fa-solid fa-quote-left" style="font-size: 2.2rem; color: var(--accent); margin-bottom: 1.8rem;"></i>
+                    <p style="font-size: 1.15rem; margin-bottom: 2rem; font-style: italic; line-height: 1.6; color: #fff;">"The predictive scaling feature alone saved us thousands of dollars in server cost overruns. It operates in pure autonomous mode."</p>
+                    <h4 style="margin-bottom: 0.3rem; font-family: var(--font-outfit);">Marcus Chen</h4>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">CTO, BlockTech</span>
+                </div>
+            </div>
+            <div class="carousel-btn prev" style="position: absolute; top: 50%; left: 1rem; transform: translateY(-50%); width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); display: flex; justify-content: center; align-items: center; cursor: pointer; color: var(--text-main); backdrop-filter: blur(5px);"><i class="fas fa-chevron-left"></i></div>
+            <div class="carousel-btn next" style="position: absolute; top: 50%; right: 1rem; transform: translateY(-50%); width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); display: flex; justify-content: center; align-items: center; cursor: pointer; color: var(--text-main); backdrop-filter: blur(5px);"><i class="fas fa-chevron-right"></i></div>
+        </div>
+    </section>
+
+    <!-- 10. Final CTA Section -->
+    <section id="cta" style="background: rgba(12, 7, 30, 0.6); border-top: 1px solid rgba(157, 78, 221, 0.1);">
+        <div class="sec-title-wrap">
+            <div class="subtitle-badge">Get Started</div>
+            <h2 class="sec-title">Ready to Automate?</h2>
+            <p class="sec-desc">Create your free sandbox environment and launch your first AI automation node in 5 minutes.</p>
+        </div>
+        <div style="max-width: 500px; margin: 0 auto;">
+            <form data-action="signup.html">
+                <div class="form-group">
+                    <input type="email" placeholder="Enter your business email" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.95rem; border-radius: 50px;">Create Sandbox Node</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Common Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-info">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.webp" alt="Logo">
+                    Stack<span>ly</span>
+                </a>
+                <p>State-of-the-art SaaS platform providing cloud execution spaces and cognitive AI pipelines for enterprise workflows.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="services.html">SLA Metrics</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact HQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Receive notifications regarding system releases and upcoming service capabilities.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Stackly Inc. All rights reserved.</p>
+            <p style="font-size: 0.85rem;">Bengaluru HQ: Outer Ring Rd, Bellandur, Bengaluru, Karnataka 560103</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
